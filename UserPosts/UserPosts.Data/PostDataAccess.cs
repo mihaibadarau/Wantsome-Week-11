@@ -9,7 +9,7 @@ namespace UserPosts.Data
     {
         protected override string GetFile()
         {
-            return @"D:\projects\wantsome\week11\UserPosts\UserPosts.Data\Files\posts.json";
+            return @"C:\Users\Mihai\source\repos\Wantsome-Week-11\UserPosts\UserPosts.Data\Files\posts.json";
         }
 
         public IList<Post> GetPostsByUserId(int id)

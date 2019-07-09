@@ -10,10 +10,15 @@ namespace UserPosts.App
         {
             IPostRepository postRepository = new PostDataAccess();
             IUserRepository userRepository = new UserDataAccess();
+            ICommentRepository commentRepository = new CommentDataAccess();
 
-            var service = new UserService(userRepository, postRepository);
+            var userService = new UserService(userRepository, postRepository);
 
-            var response = service.GetUserActiveRespose(2);
+            var userServiceResponse = userService.GetUserActiveRespose(2);
+
+            var userCommentsService = new UserCommentsService(userRepository, commentRepository);
+            var userCommentsServiceResponse = userCommentsService.GetUserComments(5);
+
         }
     }
 }
